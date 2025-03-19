@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting DApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Blockchain Voting Logo">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li> <!-- New Dashboard link -->
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
+            </ul>
+            <button id="connectWallet" class="connect-btn">Connect MetaMask</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Positions</h3>
+            <ul>
+                <li><a href="#" onclick="loadCandidates('president')">President</a></li>
+                <li><a href="#" onclick="loadCandidates('vicePresident')">Vice President</a></li>
+                <li><a href="#" onclick="loadCandidates('senator')">Senator</a></li>
+                <li><a href="#" onclick="loadCandidates('governor')">Governor</a></li>
+                <li><a href="#" onclick="loadCandidates('mayor')">Mayor</a></li>
+            </ul>
+            <div class="reward-section">
+                <h3>Reward Claims</h3>
+                <div id="reward-claims">
+                  <!-- Reward claims will be displayed here -->
+                </div>
+              </div>
+        </aside>
+
+        <section class="content">
+            <div class="candidate-container" id="candidateList">
+            </div>
+        </section>
+
+        <aside class="info-panel">
+            <h3>Election Info</h3>
+            <div class="info-content">
+                <h4>Current Stats</h4>
+                <p>Total Votes: <span id="totalVotes">0</span></p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.0/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
